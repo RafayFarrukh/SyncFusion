@@ -10,12 +10,6 @@ import { useFormik } from "formik";
 import { useStateContext } from "../contexts/ContextProvider";
 import { PacmanLoader } from "react-spinners";
 import * as yup from "yup";
-const override = () =>
-  (CSSProperties = {
-    display: "block",
-    margin: "0 auto",
-    borderColor: "red",
-  });
 
 const TeacherLogin = () => {
   const [isLoading, setIsLoading] = useState(false);
