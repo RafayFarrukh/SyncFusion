@@ -15,15 +15,13 @@ const AllCourses = () => {
   }, []);
 
   useEffect(() => {
-    axiosInstance
-      .get("http://localhost:5000/api/course/teacher/ShowAllCourses")
-      .then((res) => {
-        // console.log(courseList.map((course) => course.Course));
-        setCourses(res.data.courseList.map((course) => course.Course));
+    axiosInstance.get("/api/course/teacher/ShowAllCourses").then((res) => {
+      // console.log(courseList.map((course) => course.Course));
+      setCourses(res.data.courseList.map((course) => course.Course));
 
-        console.log(res.data.courseList.map((course) => course.Course));
-        // console.log(courses);
-      });
+      console.log(res.data.courseList.map((course) => course.Course));
+      // console.log(courses);
+    });
   }, []);
   return (
     <>

@@ -43,8 +43,7 @@ const TeacherLogin = () => {
     onSubmit: (values) => {
       setIsLoading(true);
       axios
-        .post("http://localhost:5000/api/auth/teacher/login", {
-          // .post("/users/login", {
+        .post("/api/auth/teacher/login", {
           email: values.email,
           password: values.password,
         })
