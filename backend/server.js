@@ -26,7 +26,7 @@ app.get("/", (req, res) => {
 app.use(function (req, res, next) {
   res.header(
     "Access-Control-Allow-Origin",
-    "https://sync-fusion-client.vercel.app/"
+    "https://sync-fusion-client.vercel.app"
   );
   res.header(
     "Access-Control-Allow-Headers",
