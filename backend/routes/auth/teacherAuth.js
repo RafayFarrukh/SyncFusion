@@ -73,7 +73,11 @@ router.post("/login", async function (req, res, next) {
 
         email: teacher.email,
       },
-      config.get("jwtPrivateKey")
+      // config.get("jwtPrivateKey")
+      "12bob12ou2b1ob",
+      {
+        expiresIn: "70d",
+      }
     );
     const { _id, fullName, email } = teacher;
 
