@@ -10,7 +10,7 @@ import { useFormik } from "formik";
 import { useStateContext } from "../contexts/ContextProvider";
 import { PacmanLoader } from "react-spinners";
 import * as yup from "yup";
-
+import BaseURL from "../services/baseUrl";
 const TeacherLogin = () => {
   const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
@@ -37,7 +37,7 @@ const TeacherLogin = () => {
     onSubmit: (values) => {
       setIsLoading(true);
       axios
-        .post("/api/auth/teacher/login", {
+        .post(`${BaseURL}/api/auth/teacher/login`, {
           email: values.email,
           password: values.password,
         })

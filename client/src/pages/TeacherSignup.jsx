@@ -9,6 +9,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { useFormik } from "formik";
 import classes from "./home.module.css";
 import * as yup from "yup";
+import BaseURL from "../services/baseUrl";
 
 const TeacherSignup = () => {
   const navigate = useNavigate();
@@ -39,7 +40,7 @@ const TeacherSignup = () => {
     onSubmit: (values) => {
       axios
         // .post("http://localhost:5000/api/auth/teacher/register", {
-        .post("/api/auth/teacher/register", {
+        .post(`${BaseURL}/api/auth/teacher/register`, {
           fullName: values.fullName,
           email: values.email,
           password: values.password,
