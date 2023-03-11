@@ -45,6 +45,11 @@ router.post("/register", async function (req, res, next) {
 //  @/api/teacher/login
 
 router.post("/login", async function (req, res, next) {
+  if (!req.body.email || !req.body.password) {
+    return res
+      .status(401)
+      .send({ error: "Provide all values", success: false });
+  }
   let teacher = await Teacher.findOne({
     email: req.body.email,
   });
