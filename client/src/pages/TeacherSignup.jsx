@@ -38,8 +38,8 @@ const TeacherSignup = () => {
     }),
     onSubmit: (values) => {
       axios
-        .post("http://localhost:5000/api/auth/teacher/register", {
-          // .post("/api/user/register", {
+        // .post("http://localhost:5000/api/auth/teacher/register", {
+        .post("/api/auth/teacher/register", {
           fullName: values.fullName,
           email: values.email,
           password: values.password,
